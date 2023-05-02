@@ -53,7 +53,7 @@ class Blake2(Utils):
         v[14] ^= f
         v[15] ^= 0xFFFFFFFFFFFFFFFF
         
-        funct1 = super().rol
+        funct1 = super().ror
         for r in range(self.BLAKE2B_ROUNDS):
             # Column step
             v[0] = (v[0] + v[4]) % 0xFFFFFFFFFFFFFFFF ^ (v[4] >> 64) % 0xFFFFFFFFFFFFFFFF
